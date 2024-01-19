@@ -6,11 +6,11 @@ class Agent:
         self.maze_width = maze.shape[1] # number of columns
         self.maze_height = maze.shape[0] # number of rows
         self.epsilon = epsilon
+        self.actions = actions
         self.discount_factor = discount_factor
         self.learning_rate = learning_rate
-        self.n_episodes = n_training_episodes
+        self.n_training_episodes = n_training_episodes
         self.q_values = np.zeros((self.maze_height, self.maze_width, 4))
-
     def is_terminal_state(self,current_row_index, current_column_index):
         """
         Function to determine if the specified location is a terminal state

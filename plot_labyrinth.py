@@ -1,4 +1,4 @@
-
+import numpy as np
 import matplotlib.pyplot as plt
 
 def create_colored_table(data, threshold,path):
@@ -6,7 +6,7 @@ def create_colored_table(data, threshold,path):
     ax.set_axis_off()
 
     # Create a table and add data to it
-    table = ax.table(cellText="", loc='center', cellLoc="center", rowLoc='center', colWidths=[data.shape[1]/1500]*data.shape[1],bbox = [0.02,0.02,1,1])
+    table = ax.table(cellText=data, loc='center', cellLoc="center", rowLoc='center', colWidths=[data.shape[1]/1500]*data.shape[1],bbox = [0.02,0.02,1,1])
     # Define color maps
     cmap_below_threshold = plt.get_cmap('Blues')
     cmap_above_threshold = plt.get_cmap('Reds')
