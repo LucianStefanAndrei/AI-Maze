@@ -1,7 +1,7 @@
 import numpy as np
 
 class Agent:
-    def __init__(self,maze,actions,epsilon=0.9,discount_factor=0.9,learning_rate=0.9,n_training_episodes=1000):
+    def __init__(self,maze,actions=["up","down","left","right"],epsilon=0.9,discount_factor=0.9,learning_rate=0.9,n_training_episodes=1000):
         self.maze = np.array(maze)
         self.maze_width = maze.shape[1] # number of columns
         self.maze_height = maze.shape[0] # number of rows
