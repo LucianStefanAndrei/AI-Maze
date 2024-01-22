@@ -3,8 +3,8 @@ import numpy as np
 from Agent import Agent
 from plot_labyrinth import create_colored_table
 
-maze_width = 60
-maze_height = 60
+maze_width = 20
+maze_height = 20
 exit = 100
 seed = 24
 wall_value = -100

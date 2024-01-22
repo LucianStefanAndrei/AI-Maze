@@ -20,11 +20,17 @@ def create_colored_table(data, threshold,path):
             # Choose colormap based on threshold
             if cell_value <= threshold:
                 cell_color = cmap_below_threshold(cell_value / threshold)
+                table[(i,j)].get_text().set_color(cell_color)
+
             else:
                 cell_color = cmap_above_threshold((cell_value - threshold) / (np.max(data) - threshold))
+                table[(i,j)].get_text().set_color(cell_color)
+
 
             table[(i, j)].set_facecolor(cell_color)
 
     for cell in path:
         table[(cell[0],cell[1])].set_facecolor(cmap_right_path(data[cell[0],cell[1]]/threshold))
+
+    plt.show()
     plt.show()
